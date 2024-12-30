@@ -1,0 +1,189 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+h2 {
+  font-size: 30px;
+}
+body {
+  background: url('https://wallpaperaccess.com/full/1251284.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.app {
+  background-color: rgba(55, 30, 80, 0.5); 
+  padding: 36px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); 
+  text-align: center;
+  width: 100%;
+  backdrop-filter: blur(10px); 
+  transform: translateY(20px);
+  animation: fadeInUp 1.2s ease-out;
+  border: 3px solid hsl(0deg 33.33% 1.18%);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease-out;
+  font-family: "Dancing Script", cursive;
+}
+
+.city-input {
+  padding: 15px 25px;
+  font-size: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  margin-bottom: 25px;
+  width: 80%;
+  max-width: 400px;
+  outline: none;
+  transition: all 0.3s ease;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.city-input::placeholder{
+  color: #fff;
+}
+
+.city-input:focus {
+  border-color:rgba(55, 30, 80, 0.5);
+  box-shadow: 0 0 8px rgba(55, 30, 80, 0.5);
+  transform: scale(1.03);
+}
+
+.error {
+  color: hsl(35.2deg 94.94% 84.51%);
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: bold;
+  animation: fadeIn 1s ease-out;
+}
+
+.weather-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  width: 87%;
+  text-align: left;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+.weather-card p{
+  margin: 6px;
+}
+
+@media (min-width: 1920px) {
+  .app {
+    width: 100%;
+    padding: 40px;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .city-input {
+    width: 70%;
+  }
+
+  .weather-card {
+    width: 80%;
+  }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  .app {
+    width: 100%;
+    padding: 35px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .city-input {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .weather-card {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .app {
+    width: 90%;
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .city-input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .weather-card {
+    width: 94%;
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .app {
+    width: 100%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .city-input {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  .weather-card {
+    width: 88%;
+    padding: 18px;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
